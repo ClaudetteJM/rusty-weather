@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Rusty Weather</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+     
+body {background-color: rgba(90,90,90,1); font-family: 'Verdana', sans-serif; color: white;}
+
+h1 {font-size: 1.7 em; text-align: center; padding 1.5em; border: 0px solid black; color: white; margin-bottom: 3em;}
+    
+div#content {padding: 1em; border: 3px solid white; border-radius: 10px; margin: auto; background-color: red; background-image: linear-gradient(rgb(100, 20, 170), rgb(20, 150, 170)); }
+
+    
+form {text-align: center;}
+input {width: 94%;}
+
+
+div#weather-data {display:inline-block; width: 100%;}
+
+div#conditions {display:block; width: 54%; padding-top: 1em; margin: auto 22%;}
+
+div#cond-icon {width:60%; display:inline-block; float:left; margin: auto}
+div#cond-temp {width:40%; display:inline-block; float:right;}
+div#cond-desc {display:inline-block; float: right; width: 40%;}
+    
+div#location {width:80%; text-align:center; margin: auto; padding: 0.5em;}
+div#loc-icon {width:20%; display:inline; margin: auto}
+div#loc-name {width:60%; display:inline;margin: auto; font-size: 1.5em;}
+
+
+div#curr-data {display:inline-block; width: 99%; padding-top: 2em; margin:auto; text-align:center;}
+
+div.data-display {width: 28%; display:inline-block; margin: 2%;}
+
+.data-display .data-icon {float:left;max-height:2em}
+
+.data-display .data-name {float:right;width:70%; font-size: 0.6em;}
+    
+  </style>
+  
+</head>
+
+<body>
+  <h1>Rusty Weather</h1>
+
+<div id="content">
+
+<div id="search-box">
+ <form>
+  <input type="text" id="city" placeholder="Enter city name">
+ </form>
+</div>
+  
+<div id="weather-data">
+  
+<div id="conditions">
+  
+ <div id="cond-icon"><img src="images/search.png"></div>
+
+ <div id="cond-temp">5 &#8457;</div>
+ <div id="cond-desc">conditions</div>
+  
+</div>
+
+<div style="clear:both;"></div>
+
+<div id="location">
+  
+ <div id="loc-icon"><img src="images/location.png"></div>
+ <div id="loc-name">Location</div>
+  
+</div>
+
+<div style="clear:both;"></div>
+  
+<div id="curr-data">
+  
+  <div class="data-display" id="curr-hum">
+    <div class="data-icon"><img src="images/humidity.png"></div>
+    <div class="data-val">50%</div>
+    <div class="data-name">Humidity</div>
+
+  </div>
+  
+  <div class="data-display" id="curr-feels">
+    <div class="data-icon"><img src="images/feels.png"></div>
+    <div class="data-name">Feels Like</div>
+    <div class="data-val">5 &#8457;</div>
+  </div>
+
+  
+  <div class="data-display" id="curr-wind">
+    <div class="data-icon"><img src="images/wind.png"></div>
+    <div class="data-name">Wind</div>
+    <div class="data-val">5mph</div>
+
+    
+  </div>
+ </div>
+</div>
+</div>
+
+  
+  <script src="script.js"></script>
+</body>
+
+</html>
